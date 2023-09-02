@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Your CSS styles here */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .profile-card {
+            background-color: #2b2b2b;
+            border: 1px solid #1f1f1f;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .profile-image {
+            max-width: 200px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        .profile-details {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .profile-details h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .profile-info {
+            margin: 10px 0;
+        }
+
+        .profile-info p {
+            margin: 5px 0;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .profile-description {
+            margin-top: 20px;
+            font-size: 16px;
+            line-height: 1.5;
+            text-align: justify;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Add more styles for animations and engagement */
+        .icon {
+            font-size: 24px;
+            margin-right: 10px;
+            color: #ff6600;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .icon:hover {
+            color: #ffcc00;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Function to animate profile information
+            function animateInfo(infoClass) {
+                $(infoClass).each(function(index) {
+                    var delay = index * 500; // Delay each animation
+                    $(this).delay(delay).animate({ opacity: 1 }, 500);
+                });
+            }
+
+            // Animate profile information and description
+            animateInfo(".profile-info p");
+            animateInfo(".profile-description");
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-card">
+            <img class="profile-image" src="your-profile-image.jpg" alt="Profile Image">
+            <div class="profile-details">
+                <h2>Mohan Krishna Shrestha</h2>
+                <p class="profile-info"><i class="fas fa-graduation-cap icon"></i> Faculty: Computer Science</p>
+                <p class="profile-info"><i class="fas fa-id-card icon"></i> Registration No.: 031989-22</p>
+                <p class="profile-info"><i class="fas fa-clipboard icon"></i> Semester: 2nd</p>
+                <p class="profile-info"><i class="fas fa-list-ol icon"></i> Roll No.: 49</p>
+                <p class="profile-info"><i class="fas fa-calendar-alt icon"></i> Date of Birth: 2061/06/25 (BS) / 2004/10/11 (AD)</p>
+                <p class="profile-info"><i class="fas fa-map-marker-alt icon"></i> Temporary Address: Khadpu, Dhulikhel</p>
+                <p class="profile-info"><i class="fas fa-home icon"></i> Permanent Address: Lab Lalbandi-7, Sarlahi</p>
+                <p class="profile-info"><i class="fas fa-male icon"></i> Father's Name: Panchalal Shrestha</p>
+                <p class="profile-info"><i class="fas fa-female icon"></i> Mother's Name: Ganga Pote Shrestha</p>
+                <p class="profile-info"><i class="fas fa-envelope icon"></i> Email Address: <a href="mailto:binormus066@gmail.com" target="_blank">binormus066@gmail.com</a></p>
+                <p class="profile-info"><i class="fas fa-phone icon"></i> Mobile No.: 98450 22298</p>
+                <p class="profile-info"><i class="fas fa-lightbulb icon"></i> Hobbies: Learning, Earning, Coding</p>
+                <div class="profile-description">
+                    Hello! I am pleased to introduce a remarkable individual who embodies the qualities of enthusiasm, activity, and a sincere commitment to learning. Emerging from a middle-class background with a strong academic foundation, I have not only excelled in my studies but also graciously embraced the role of a tech supporter, generously assisting those navigating the complexities of the digital world.
+
+                    A guided individual who seizes opportunities to explore and engage through an active lifestyle, my steadfast dedication to continuous learning ensures that personal growth remains a constant companion throughout life's journey. At last, my unwavering commitment to personal technological advancement is a testament to my character.
+
+                    Yours sincerely,
+                    MKS
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
